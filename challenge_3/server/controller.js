@@ -4,7 +4,7 @@ const controller = {
   getAll: (req, res) => {
     models.get((err, result) => {
       if (err) {
-        res.status(404).send('ERROR ' + err);
+        res.status(404).send(err);
       } else {
         res.status(200).send(result);
       }
@@ -13,9 +13,9 @@ const controller = {
   postOne: (req, res) => {
     models.post(req.body, (err, result) => {
       if (err) {
-        res.status(400).send('ERROR ' + err);
+        res.status(400).send(err);
       } else {
-        res.status(200).send(req.body);
+        res.status(200).send('Received POST');
       }
     });
   },
