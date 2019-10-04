@@ -1,0 +1,7 @@
+table, th, td, tr, container {
+  border: 20px solid black;
+}
+
+.box {
+  background-color: white;
+}
